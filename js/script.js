@@ -1,32 +1,3 @@
-const swiper = new Swiper('.users-swiper', {
-  loop: true,
-  spaceBetween: 20,
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.users-swpier-scrollbar',
-    hide: false,
-  },
-  breakpoints: {
-    // when window width is >= 320px
-    320: {
-      slidesPerView: 1,
-    },
-    // when window width is >= 480px
-    767: {
-      slidesPerView: 2,
-    },
-    // when window width is >= 640px
-    1200: {
-      slidesPerView: 3,
-    }
-  }
-});
-
 document.addEventListener('click', function(e) {
     let menuBtn = document.querySelector('.menu-btn');
     let menu = document.querySelector('.menu');
@@ -42,7 +13,7 @@ document.addEventListener('click', function(e) {
     }
 })
 
-document.querySelectorAll('.header-link').forEach(link => {
+document.querySelectorAll('._link').forEach(link => {
   link.addEventListener('click', function(e) {
       e.preventDefault();
       const targetId = this.getAttribute('href');
@@ -52,9 +23,6 @@ document.querySelectorAll('.header-link').forEach(link => {
       });
   });
 });
-
-
 setTimeout(() => {
   document.querySelector('.cookies').style.display = 'block'
-  
 }, 1000);

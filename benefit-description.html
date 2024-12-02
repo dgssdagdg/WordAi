@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A smart assistant for working with contracts and lawsuits right in Word!">
+    <link rel="icon" type="image/x-icon" href="./img/logo.ico">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Word Ai</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header-row">
+                    <a href="./" class="header-logo">
+                        <img src="./img/logo.webp" alt="Logo">
+                        Word AI
+                    </a>
+                    <nav class="header-nav">
+                        <ul class="header-list">
+                            <li><a href="./" class="header-link">About the extension</a></li>
+                            <li><a href="./" class="header-link">How it works</a></li>
+                            <li><a href="./" class="header-link">Advantages</a></li>
+                            <li><a href="./" class="header-link">For whom</a></li>
+                            <li><a href="./" class="header-link">Reviews</a></li>
+                            <li><a href="./" class="header-link">Download now</a></li>
+                        </ul>
+                    </nav>
+                    <div class="menu-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="menu">
+            <div class="menu-row">
+                <a href="./" class="header-logo">
+                    <img src="./img/logo.webp" alt="Logo">
+                    Word AI
+                </a>
+                <nav class="header-nav">
+                    <ul class="header-list">
+                        <li><a href="./" class="header-link">About the extension</a></li>
+                        <li><a href="./" class="header-link">How it works</a></li>
+                        <li><a href="./" class="header-link">Advantages</a></li>
+                        <li><a href="./" class="header-link">For whom</a></li>
+                        <li><a href="./" class="header-link">Reviews</a></li>
+                        <li><a href="./" class="header-link">Download now</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <main class="main">
+            <div class="benefitss-description">
+                <div class="container">
+                    <div class="benefitss-description-row">
+                        <h1 id="title" class="_title">Lawyers</h1>
+                        <div id="description" class="benefitss-description-texts _text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-row">
+                    <a href="./" class="header-logo">
+                        <img src="./img/logo.webp" alt="Logo">
+                        Word AI
+                    </a>
+                    <nav class="header-nav">
+                        <ul class="header-list">
+                            <li><a href="./" class="header-link">About the extension</a></li>
+                            <li><a href="./" class="header-link">How it works</a></li>
+                            <li><a href="./" class="header-link">Advantages</a></li>
+                            <li><a href="./" class="header-link">For whom</a></li>
+                            <li><a href="./" class="header-link">Reviews</a></li>
+                            <li><a href="./" class="header-link">Download now</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </footer>
+        <div class="cookies">
+            <p class="cookies-title">We use cookies</p>
+            <p class="cookies-text">We use cookies to ensure the correct operation of our site, improve your user experience and provide personalized content. You can accept all cookies or customize their use according to your preferences.</p>
+            <p class="cookies-text">You can find out more about how we use cookies in our Cookie Policy.</p>
+            <div class="cookies-btns">
+                <button type="button" class="cookies-btn">Accept all</button>
+                <button type="button" class="cookies-btn">Reject unnecessary cookies</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+    <script>
+        async function loadDescription() {
+        const urlParams = new URLSearchParams(window.location.search);
+        let category = urlParams.get('description');
+        try {
+            if(!category) {category = 'Lawyers'}
+            const response = await fetch(`./js/decription.json`);
+            const data = await response.json();
+            document.getElementById('title').textContent = data[category].title;
+            let description = document.getElementById('description');
+            data[category].decriptionArray.forEach(element => {
+                let paragraph = document.createElement('p');
+                
+                paragraph.textContent = element;
+                
+                description.appendChild(paragraph);
+            });
+        } catch (error) {
+            console.error('Ошибка загрузки данных:', error);
+        }
+        }
+        window.onload = loadDescription;
+    </script>
+</body>
+</html>

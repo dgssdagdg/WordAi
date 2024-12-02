@@ -1,0 +1,26 @@
+{
+    "Lawyers": {
+        "title": "Lawyers",
+        "decriptionArray": [
+            "Lawyers are always under pressure with tight deadlines and high client expectations. Our artificial intelligence-powered software will help you optimize the process of working with contracts and legal documents. Automatic extraction of key data, analysis of legal terminology, and recommendations for improving texts will make your work more efficient. You will no longer be distracted by routine tasks—focus on strategic objectives and ensuring your clients' interests."
+        ]
+    },
+    "CivilServants": {
+        "title": "Civil servants",
+        "decriptionArray": [
+            "Civil servants play a crucial role in ensuring compliance with laws and regulations. By using our intelligent assistant, you can speed up the processing of applications, contracts, and other documents. With automated analysis and report generation, you can easily track compliance with regulatory requirements and improve interactions with citizens. Our software will free up time for more meaningful tasks, enhancing your overall work efficiency."
+        ]
+    },
+    "Employees": {
+        "title": "Employees of legal departments",
+        "decriptionArray": [
+            "Legal department employees often face a vast amount of documents and complex processes. Our application will help you organize and simplify your work with contracts and legal cases. Utilize features such as automated searching, commenting, and collaborative document editing to quickly respond to changes and requests. Additionally, built-in templates will help standardize documents and minimize errors, making your work much easier."
+        ]
+    },
+    "Students": {
+        "title": "Students",
+        "decriptionArray": [
+            "Law students have many tasks related to studying and analyzing laws and practices. Our platform provides tools to simplify the learning process, including automated annotation creation, case analysis, and access to up-to-date legal materials. This will allow you to focus on what matters most—immersing yourself in the study of law—and enhance your academic results, making it easier to prepare for exams and write research papers."
+        ]
+    }
+}
